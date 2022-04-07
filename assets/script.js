@@ -1,6 +1,8 @@
 //global variables that will be needed
 var saveButton = $(".saveBtn");
 var timeBlock = $(".time-block");
+var description = $(".description")
+
 var scheduleInfo;
 var scheduleTime;
 
@@ -36,9 +38,9 @@ function timeTrackerWithColor() {
     //setting up for the comparison of the current hours
     var currentHour = moment().hour();
 
-
     timeBlock.each(function() {
-        var timeBlockHours = parseInt($(this).attr("id").split("hour")[1]);
+
+        var timeBlockHours = parseInt($(this));
 //comparison of the block time with the current time to set the CSS of the time blocks
         if (timeBlockHours > currentHour) {
             $(this).addClass("future");
@@ -47,20 +49,37 @@ function timeTrackerWithColor() {
         } else {
             $(this).addClass("past");
         }
-        console.log(this)
-     
+    
     });
-}
 
 
 //WHEN I click the save button for that timeblock
+saveButton.on("click", function(){
+    scheduleInfo = $(this).siblings(".description").val();
+    scheduleTime = $(this).parent().attr("id");
+    localStorage.setItem(scheduleInfo, scheduleTime);
+    saveData();
+});
+    
 //THEN the text for that event is saved in local storage
-
 function saveData() {
+
     localStorage.setItem(scheduleTime, scheduleInfo);
+    localStorage.getItem(scheduleInfo, scheduleTime);
+
+//     description.val(localStorage.getItem(hourNineAm));
+//     description.val(localStorage.getItem(hourTenAm));
+//     description.val(localStorage.getItem(hourElevenAm));
+//     description.val(localStorage.getItem(hourTwelvePm));
+//     description.val(localStorage.getItem(hourOnePm));
+//     description.val(localStorage.getItem(hourTwoPm));
+//     description.val(localStorage.getItem(hourThreePm));
+//     description.val(localStorage.getItem(hourFourPm));
+//     description.val(localStorage.getItem(hourFivePm));
 }
 
+}
 //WHEN I refresh the page
 //THEN the saved events persist
+timeTrackerWithColor();
 displayTime();
-
