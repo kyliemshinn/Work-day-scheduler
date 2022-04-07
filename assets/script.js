@@ -95,18 +95,18 @@ function saveData() {
     // window.saveData = function() {
     //     localStorage.setItem.json.stringify(scheduleInfo, scheduleTime.val());
         
-    // localStorage.setItem(scheduleTime, scheduleInfo);
+    localStorage.setItem(scheduleTime, scheduleInfo);
     // localStorage.getItem(scheduleInfo, scheduleTime);
 
-//     $(".description").val(localStorage.getItem(hourNineAm));
-//     $(".description").val(localStorage.getItem(hourTenAm));
-//     $(".description").val(localStorage.getItem(hourElevenAm));
-//     $(".description").val(localStorage.getItem(hourTwelvePm));
-//     $(".description").val(localStorage.getItem(hourOnePm));
-//     $(".description").val(localStorage.getItem(hourTwoPm));
-//     $(".description").val(localStorage.getItem(hourThreePm));
-//     $(".description").val(localStorage.getItem(hourFourPm));
-//     $(".description").val(localStorage.getItem(hourFivePm));
+    $(".description").val(localStorage.getItem(hourNineAm));
+    $(".description").val(localStorage.getItem(hourTenAm));
+    $(".description").val(localStorage.getItem(hourElevenAm));
+    $(".description").val(localStorage.getItem(hourTwelvePm));
+    $(".description").val(localStorage.getItem(hourOnePm));
+    $(".description").val(localStorage.getItem(hourTwoPm));
+    $(".description").val(localStorage.getItem(hourThreePm));
+    $(".description").val(localStorage.getItem(hourFourPm));
+    $(".description").val(localStorage.getItem(hourFivePm));
 // }
 }
 }
