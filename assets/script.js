@@ -1,7 +1,6 @@
 //global variables that will be needed
 var saveButton = $(".saveBtn");
 var timeBlock = $(".time-block");
-var description = $(".description")
 
 var scheduleInfo;
 var scheduleTime;
@@ -54,9 +53,10 @@ function timeTrackerWithColor() {
 
 
 //WHEN I click the save button for that timeblock
-saveButton.on("click", function(){
+saveButton.click(function(){
+
     scheduleInfo = $(this).siblings(".description").val();
-    scheduleTime = $(this).parent().attr("id");
+    scheduleTime = $(this).parent();
     localStorage.setItem(scheduleInfo, scheduleTime);
     saveData();
 });
@@ -64,21 +64,54 @@ saveButton.on("click", function(){
 //THEN the text for that event is saved in local storage
 function saveData() {
 
-    localStorage.setItem(scheduleTime, scheduleInfo);
-    localStorage.getItem(scheduleInfo, scheduleTime);
+    // var nineAm = JSON.stringify(localStorage.getItem("nine-am"));
+    // hour9.val(hourNineAm);
 
-//     description.val(localStorage.getItem(hourNineAm));
-//     description.val(localStorage.getItem(hourTenAm));
-//     description.val(localStorage.getItem(hourElevenAm));
-//     description.val(localStorage.getItem(hourTwelvePm));
-//     description.val(localStorage.getItem(hourOnePm));
-//     description.val(localStorage.getItem(hourTwoPm));
-//     description.val(localStorage.getItem(hourThreePm));
-//     description.val(localStorage.getItem(hourFourPm));
-//     description.val(localStorage.getItem(hourFivePm));
-}
+    // var tenAm = JSON.parse(localStorage.getItem("ten-am"));
+    // hour10.val(hourTenAm);
 
+    // var elevenAm = JSON.parse(localStorage.getItem("eleven-am"));
+    // hour11.val(hourElevenAm);
+
+    // var twelvePm = JSON.parse(localStorage.getItem("twelve-pm"));
+    // hour12.val(hourTwelvePm);
+
+    // var onePm = JSON.parse(localStorage.getItem("one-pm"));
+    // hour13.val(hourOnePm);
+
+    // var twoPm = JSON.parse(localStorage.getItem("two-pm"));
+    // hour14.val(hourTwoPm);
+
+    // var threePm = JSON.parse(localStorage.getItem("three-pm"));
+    // hour15.val(hourThreePm);
+
+    // var fourPm = JSON.parse(localStorage.getItem("four-pm"));
+    // hour16.val(hourFourPm);
+
+    // var fivePm = JSON.parse(localStorage.getItem("five-pm"));
+    // hour17.val(hourFivePm);
+    
+
+    // window.saveData = function() {
+    //     localStorage.setItem.json.stringify(scheduleInfo, scheduleTime.val());
+        
+    // localStorage.setItem(scheduleTime, scheduleInfo);
+    // localStorage.getItem(scheduleInfo, scheduleTime);
+
+//     $(".description").val(localStorage.getItem(hourNineAm));
+//     $(".description").val(localStorage.getItem(hourTenAm));
+//     $(".description").val(localStorage.getItem(hourElevenAm));
+//     $(".description").val(localStorage.getItem(hourTwelvePm));
+//     $(".description").val(localStorage.getItem(hourOnePm));
+//     $(".description").val(localStorage.getItem(hourTwoPm));
+//     $(".description").val(localStorage.getItem(hourThreePm));
+//     $(".description").val(localStorage.getItem(hourFourPm));
+//     $(".description").val(localStorage.getItem(hourFivePm));
+// }
 }
+}
+    
+    
 //WHEN I refresh the page
 //THEN the saved events persist
 timeTrackerWithColor();
