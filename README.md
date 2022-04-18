@@ -1,24 +1,32 @@
 # Work-day-scheduler
 
+https://kyliemshinn.github.io/Work-day-scheduler/
+
 ## Description
 
 This webpage is meant to display a current daily schedule that can be cleared out after each day with a clear button. The timing is set for a typical workday- 9am to 5pm- and when you input text for a given hour it will stay there until the information is cleared out. The schedule is color coordinated, with red being the current hour, grey being the past, and green being the future. There is a clock displayed at the top of the page where it is counting each second.
 
 ![work-day-schedule](/work-day-schedule-gif.gif)
 
-### Lessons Learned
+## Lessons Learned
 
 The most prominent lesson learned with this project is to continuously console.log parts of code to ensure that it is working properly.Looking at things piece by piece always finds itself incredibly useful and creating a clear plan in th beginning to get an idea of all the parts that willbe needed.
 
-### Author
+## Technologies Used
+* HTML
+* CSS
+* Javascript
+
+
+## Author
 
 Kylie Shinn
 
-LinkedIn: ![LinkedInURL](https://www.linkedin.com/in/kylie-shinn-18b0301b7/)
-Github:![Github](https://github.com/kyliemshinn)
+* LinkedIn: [LinkedInURL](https://www.linkedin.com/in/kylie-shinn-18b0301b7/)
+* Github:[Github](https://github.com/kyliemshinn)
 
 
-### License
+## License
 
 Copyright (c) [2022] [Kylie]
 
